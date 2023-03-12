@@ -1,18 +1,19 @@
-int potPin = A0;
-int ESCPin = 9;
+const byte potPin = A0;
+const byte ESCPin = 9;
+
+unsigned int potVal; // stores the voltage read from the potentiometer
+byte ESCVal;  // stores the duty cycle to be output on the ESCPin
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   
   pinMode(ESCPin, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  int potVal = analogRead(potPin);
+  potVal = analogRead(potPin);
 
-  int ESCVal = (255.0/1023.0) * (1023-potVal);
+  ESCVal = (1023-potVal) / 4;
   analogWrite(ESCPin, ESCVal);
   Serial.println(ESCVal);
 }
