@@ -38,7 +38,7 @@ void setup() {
 
 void loop() {
   potVal = analogRead(potPin);
-  ESCVal = (1023-potVal) >> 2;
+  ESCVal = potVal >> 2;
   analogWrite(ESCPin, ESCVal);
   Serial.println(ESCVal);
 
