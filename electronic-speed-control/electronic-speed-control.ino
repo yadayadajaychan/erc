@@ -7,7 +7,8 @@ const byte ESCPin = 9;
 unsigned int potVal; // stores the voltage read from the potentiometer
 byte ESCVal;  // stores the duty cycle to be output on the ESCPin
 
-const int rs = 7, en = 6, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+const byte rw = 12;
+const int rs = 2, en = 3, d4 = 4, d5 = 5, d6 = 6, d7 = 7;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 //const byte chinchin[] = {
@@ -24,6 +25,9 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 void setup() {
   Serial.begin(9600);
   pinMode(ESCPin, OUTPUT);
+
+  pinMode(rw, OUTPUT);
+  digitalWrite(rw, LOW);
 
   lcd.begin(16,2); // initialize lcd screen with dimensions
   //lcd.createChar(0, chinchin);
