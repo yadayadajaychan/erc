@@ -19,7 +19,7 @@
       )
     )
     (symbol "electronic-speed-control_1_1"
-      (pin input line (at -27.94 11.43 0) (length 2.54)
+      (pin input line (at -27.94 -10.16 0) (length 2.54)
         (name "GND" (effects (font (size 1.27 1.27))))
         (number "" (effects (font (size 1.27 1.27))))
       )
@@ -39,7 +39,7 @@
         (name "POWER-" (effects (font (size 1.27 1.27))))
         (number "" (effects (font (size 1.27 1.27))))
       )
-      (pin input line (at -27.94 6.35 0) (length 2.54)
+      (pin input line (at -27.94 11.43 0) (length 2.54)
         (name "PWM" (effects (font (size 1.27 1.27))))
         (number "" (effects (font (size 1.27 1.27))))
       )
