@@ -58,20 +58,3 @@ void loop() {
   //  lcd.print(perc);
   //}
 }
-
-/* Pin Connections
- *
- * VSS -> GND
- * VDD -> +5V
- * V0 -> POTENTIOMETER
- * RS -> 7
- * RW -> GND
- * EN -> 6
- * D4 -> 5
- * D5 -> 4
- * D6 -> 3
- * D7 -> 2
- * A -> +5V
- * K -> GND
- *
- */
